@@ -5,13 +5,13 @@ include("libs/phpexcel/PHPExcel.php");
 include("libs/progress_bar.php");
 $whois=[];
 
-$shortopts  = "";
-$shortopts .= "o:";  // Required value for output file
-$shortopts .= "f::"; // Optional value filename
-$shortopts .= "q::"; // Optional value query
+$shortopts = "o:";  // Required value for output file
+$shortopts .= "f:"; // Optional value filename
+$shortopts .= "q:"; // Optional value query
 $shortopts .= "h"; // value help
 $longopts  = array(
-    "help"     // Help value
+    "help",
+    "h"
 );
 
 $options = getopt($shortopts, $longopts);
