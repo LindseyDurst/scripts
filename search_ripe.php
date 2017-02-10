@@ -37,6 +37,9 @@ if(isset($options['f']) && isset($options['o']) && !isset($options['q'])){
 	$viewstate=$arr[1];
 	$search_query=urlencode($options['q']);
 	$whois=search_ripe($search_query,$viewstate,$cookies);
+} else {
+	echo "Error";
+	die();
 }
 
 build_excel($whois,$options['o']);
