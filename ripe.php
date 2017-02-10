@@ -4,8 +4,7 @@
 include("libs/phpexcel/PHPExcel.php");
 include("libs/progress_bar.php");
 
-$shortopts  = "";
-$shortopts .= "o:";  // Required value for output file
+$shortopts  = "o:";  // Required value for output file
 $shortopts .= "f:"; // Optional value filename
 $shortopts .= "h"; // value help
 $longopts  = array(
@@ -14,7 +13,7 @@ $longopts  = array(
 
 $options = getopt($shortopts, $longopts);
 if(isset($options['h']) || isset($options['help'])){
-	echo "-f\tinput file with ips.\n-o\toutput excel file.";
+	echo "-f\tinput file with ips.\n-o\toutput excel file.\n";
 	die();
 }
 if (!isset($options['o']) || !isset($options['f'])){
