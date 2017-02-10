@@ -8,10 +8,10 @@ php search_ripe.php -h<br />
 -o output excel file. <br />
 <br />
 search queries from file:<br />
-php search_ripe.php -f=file.txt -o=table.xlsx<br />
+php search_ripe.php -f "dorks_file" -o "table.xlsx"<br />
 <br />
 search query from terminal:<br />
-php search_ripe.php -q=company -o=table.xlsx<br />
+php search_ripe.php -q "company" -o "table.xlsx"<br />
 <br /><br />
 
 **search networks for ips**
@@ -20,4 +20,4 @@ php ripe.php -h<br />
 -f input file with ips.<br />
 -o output excel file.<br />
 <br />
-php ripe.php -f=ips_file -o=table.xlsx
+php ripe.php -f "ips_file" -o "table.xlsx"
