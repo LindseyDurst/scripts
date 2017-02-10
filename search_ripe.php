@@ -1,8 +1,8 @@
 <?php
 # finally it works *_*
 
-include("libs\\phpexcel\\PHPExcel.php");
-include("libs\\progress_bar.php");
+include("libs/phpexcel/PHPExcel.php");
+include("libs/progress_bar.php");
 $whois=[];
 
 $shortopts  = "";
