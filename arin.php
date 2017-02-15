@@ -1,6 +1,6 @@
 <?php
-include("../phpexcel/PHPExcel.php");
-include("progress_bar.php");
+include("libs/phpexcel/PHPExcel.php");
+include("libs/progress_bar.php");
 
 $shortopts  = "";
 $shortopts .= "o:";  // Required value for output file
