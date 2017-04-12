@@ -1,17 +1,17 @@
 <?php
 # finally it works *_*
 
-include("libs/phpexcel/PHPExcel.php");
-include("libs/progress_bar.php");
+include("libs\\phpexcel\\PHPExcel.php");
+include("libs\\progress_bar.php");
 $whois=[];
 
-$shortopts = "o:";  // Required value for output file
-$shortopts .= "f:"; // Optional value filename
-$shortopts .= "q:"; // Optional value query
+$shortopts  = "";
+$shortopts .= "o:";  // Required value for output file
+$shortopts .= "f::"; // Optional value filename
+$shortopts .= "q::"; // Optional value query
 $shortopts .= "h"; // value help
 $longopts  = array(
-    "help",
-    "h"
+    "help"     // Help value
 );
 
 $options = getopt($shortopts, $longopts);
@@ -37,9 +37,6 @@ if(isset($options['f']) && isset($options['o']) && !isset($options['q'])){
 	$viewstate=$arr[1];
 	$search_query=urlencode($options['q']);
 	$whois=search_ripe($search_query,$viewstate,$cookies);
-} else {
-	echo "Error";
-	die();
 }
 
 build_excel($whois,$options['o']);
